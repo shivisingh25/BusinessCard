@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,11 +40,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BusinessCardTop(name = "Shivangi Singh",
-                                title = "Android Developer")
-                    BusinessCardBottom(contact = "+919939263850",
-                        socialMediaId = "@AndroidDev",
-                        emailId = "shivangisingh0306@gmail.com")
+                    BusinessCardTop(name = stringResource(R.string.shivangi_singh),
+                                title = stringResource(R.string.android_developer)
+                    )
+                    BusinessCardBottom(contact = stringResource(R.string._919939263850),
+                        socialMediaId = stringResource(R.string.androiddev),
+                        emailId = stringResource(R.string.shivangisingh0306_gmail_com)
+                    )
                 }
             }
         }
@@ -167,11 +170,12 @@ fun BusinessCardBottom(contact: String, socialMediaId: String, emailId: String,m
 @Composable
 fun GreetingPreview() {
     BusinessCardTheme {
-        BusinessCardTop(name = "Shivangi Singh",
-            title = "Android Developer")
-        BusinessCardBottom(contact = "+919939263850",
-            socialMediaId = "@AndroidDev",
-            emailId = "shivangisingh0306@gmail.com")
-
+        BusinessCardTop(name = stringResource(R.string.shivangi_singh),
+            title = stringResource(R.string.android_developer)
+        )
+        BusinessCardBottom(contact = stringResource(R.string._919939263850),
+            socialMediaId = stringResource(R.string.androiddev),
+            emailId = stringResource(R.string.shivangisingh0306_gmail_com)
+        )
     }
 }
